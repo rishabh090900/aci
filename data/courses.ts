@@ -32,6 +32,9 @@ export interface ScholarshipBoard {
   percentage: string;
   feeOff: string;
   netPayable: string;
+  installment1: string;
+  installment2: string;
+  installment3: string;
 }
 
 export interface SchoolingFee {
@@ -128,9 +131,19 @@ export const scholarshipNEET: ScholarshipNEET[] = [
   { airGen: "≤ 40,000", airSC: "≤ 1,50,000", airST: "≤ 1,80,000", payableFee: "NIL" },
   { airGen: "≤ 50,000", airSC: "≤ 1,60,000", airST: "≤ 1,90,000", payableFee: "₹15,000" },
   { airGen: "≤ 60,000", airSC: "≤ 1,70,000", airST: "≤ 2,00,000", payableFee: "₹20,000" },
+  { airGen: "≤ 70,000", airSC: "≤ 1,80,000", airST: "≤ 2,10,000", payableFee: "₹25,000" },
+  { airGen: "≤ 80,000", airSC: "≤ 1,90,000", airST: "≤ 2,20,000", payableFee: "₹30,000" },
+  { airGen: "≤ 90,000", airSC: "≤ 2,00,000", airST: "≤ 2,30,000", payableFee: "₹35,000" },
   { airGen: "≤ 1,00,000", airSC: "≤ 2,10,000", airST: "≤ 2,40,000", payableFee: "₹40,000" },
+  { airGen: "≤ 1,10,000", airSC: "≤ 2,20,000", airST: "≤ 2,50,000", payableFee: "₹45,000" },
+  { airGen: "≤ 1,20,000", airSC: "≤ 2,30,000", airST: "≤ 2,60,000", payableFee: "₹50,000" },
+  { airGen: "≤ 1,30,000", airSC: "≤ 2,40,000", airST: "≤ 2,70,000", payableFee: "₹55,000" },
+  { airGen: "≤ 1,40,000", airSC: "≤ 2,50,000", airST: "≤ 2,80,000", payableFee: "₹60,000" },
+  { airGen: "≤ 1,50,000", airSC: "≤ 2,60,000", airST: "≤ 2,90,000", payableFee: "₹65,000" },
   { airGen: "≤ 2,00,000", airSC: "≤ 3,00,000", airST: "≤ 3,20,000", payableFee: "₹70,000" },
+  { airGen: "≤ 2,50,000", airSC: "≤ 3,20,000", airST: "≤ 3,50,000", payableFee: "₹75,000" },
   { airGen: "≤ 3,00,000", airSC: "≤ 3,50,000", airST: "≤ 4,00,000", payableFee: "₹80,000" },
+  { airGen: "≤ 3,50,000", airSC: "≤ 4,00,000", airST: "≤ 4,50,000", payableFee: "₹90,000" },
   { airGen: "≤ 4,00,000", airSC: "≤ 4,50,000", airST: "≤ 5,00,000", payableFee: "₹1,00,000" }
 ];
 
@@ -142,6 +155,7 @@ export const scholarshipJEE: ScholarshipJEE[] = [
   { percentile: "≥ 90", genOBCEWS: "₹50,000", scST: "₹40,000" },
   { percentile: "≥ 85", genOBCEWS: "₹60,000", scST: "₹50,000" },
   { percentile: "≥ 80", genOBCEWS: "₹65,000", scST: "₹55,000" },
+  { percentile: "≥ 75", genOBCEWS: "₹75,000", scST: "₹65,000" },
   { percentile: "≥ 70", genOBCEWS: "₹85,000", scST: "₹75,000" },
   { percentile: "≥ 60", genOBCEWS: "₹90,000", scST: "₹80,000" },
   { percentile: "≥ 50", genOBCEWS: "₹95,000", scST: "₹85,000" }
@@ -149,13 +163,26 @@ export const scholarshipJEE: ScholarshipJEE[] = [
 
 // Scholarship based on Board Percentage (X/XII)
 export const scholarshipBoard: ScholarshipBoard[] = [
-  { percentage: "≥ 98%", feeOff: "₹90,000", netPayable: "₹25,000" },
-  { percentage: "≥ 97%", feeOff: "₹80,000", netPayable: "₹35,000" },
-  { percentage: "≥ 96%", feeOff: "₹70,000", netPayable: "₹45,000" },
-  { percentage: "≥ 95%", feeOff: "₹65,000", netPayable: "₹50,000" },
-  { percentage: "≥ 90%", feeOff: "₹40,000", netPayable: "₹75,000" },
-  { percentage: "≥ 80%", feeOff: "₹23,000", netPayable: "₹92,000" },
-  { percentage: "≤ 70%", feeOff: "₹0", netPayable: "₹1,15,000" }
+  { percentage: "≥ 98%", feeOff: "₹90,000", netPayable: "₹25,000", installment1: "₹20,000", installment2: "₹5,000", installment3: "-" },
+  { percentage: "≥ 97%", feeOff: "₹80,000", netPayable: "₹35,000", installment1: "₹20,000", installment2: "₹15,000", installment3: "-" },
+  { percentage: "≥ 96%", feeOff: "₹70,000", netPayable: "₹45,000", installment1: "₹20,000", installment2: "₹15,000", installment3: "₹10,000" },
+  { percentage: "≥ 95%", feeOff: "₹65,000", netPayable: "₹50,000", installment1: "₹20,000", installment2: "₹20,000", installment3: "₹10,000" },
+  { percentage: "≥ 94%", feeOff: "₹58,000", netPayable: "₹57,000", installment1: "₹25,000", installment2: "₹20,000", installment3: "₹12,000" },
+  { percentage: "≥ 93%", feeOff: "₹53,000", netPayable: "₹62,000", installment1: "₹25,000", installment2: "₹25,000", installment3: "₹12,000" },
+  { percentage: "≥ 92%", feeOff: "₹48,000", netPayable: "₹67,000", installment1: "₹27,000", installment2: "₹27,000", installment3: "₹13,000" },
+  { percentage: "≥ 91%", feeOff: "₹43,000", netPayable: "₹72,000", installment1: "₹29,000", installment2: "₹29,000", installment3: "₹14,000" },
+  { percentage: "≥ 90%", feeOff: "₹40,000", netPayable: "₹75,000", installment1: "₹30,000", installment2: "₹30,000", installment3: "₹15,000" },
+  { percentage: "≥ 88%", feeOff: "₹36,000", netPayable: "₹79,000", installment1: "₹32,000", installment2: "₹32,000", installment3: "₹15,000" },
+  { percentage: "≥ 86%", feeOff: "₹32,000", netPayable: "₹83,000", installment1: "₹34,000", installment2: "₹34,000", installment3: "₹15,000" },
+  { percentage: "≥ 84%", feeOff: "₹29,000", netPayable: "₹86,000", installment1: "₹35,000", installment2: "₹35,000", installment3: "₹16,000" },
+  { percentage: "≥ 82%", feeOff: "₹26,000", netPayable: "₹89,000", installment1: "₹36,000", installment2: "₹36,000", installment3: "₹17,000" },
+  { percentage: "≥ 80%", feeOff: "₹23,000", netPayable: "₹92,000", installment1: "₹37,000", installment2: "₹37,000", installment3: "₹18,000" },
+  { percentage: "≥ 78%", feeOff: "₹20,000", netPayable: "₹95,000", installment1: "₹38,000", installment2: "₹38,000", installment3: "₹19,000" },
+  { percentage: "≥ 76%", feeOff: "₹17,000", netPayable: "₹98,000", installment1: "₹40,000", installment2: "₹38,000", installment3: "₹20,000" },
+  { percentage: "≥ 74%", feeOff: "₹14,000", netPayable: "₹1,01,000", installment1: "₹40,000", installment2: "₹40,000", installment3: "₹21,000" },
+  { percentage: "≥ 72%", feeOff: "₹11,000", netPayable: "₹1,04,000", installment1: "₹41,000", installment2: "₹41,000", installment3: "₹22,000" },
+  { percentage: "≥ 70%", feeOff: "₹8,000", netPayable: "₹1,07,000", installment1: "₹42,000", installment2: "₹42,000", installment3: "₹23,000" },
+  { percentage: "≤ 70%", feeOff: "₹0", netPayable: "₹1,15,000", installment1: "₹48,000", installment2: "₹43,000", installment3: "₹24,000" }
 ];
 
 // Schooling Fee for XI & XII

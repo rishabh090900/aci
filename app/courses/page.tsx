@@ -238,6 +238,9 @@ export default function CoursesPage() {
                         <th className="px-6 py-4 text-left">Percentage</th>
                         <th className="px-6 py-4 text-center">Fee Off</th>
                         <th className="px-6 py-4 text-center">Net Payable</th>
+                        <th className="px-6 py-4 text-center">1st Installment<br/>(Admission)</th>
+                        <th className="px-6 py-4 text-center">2nd Installment<br/>(2 Months)</th>
+                        <th className="px-6 py-4 text-center">3rd Installment<br/>(4 Months)</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
@@ -246,6 +249,9 @@ export default function CoursesPage() {
                           <td className="px-6 py-4 font-semibold text-gray-900">{scholarship.percentage}</td>
                           <td className="px-6 py-4 text-center font-bold text-red-600">{scholarship.feeOff}</td>
                           <td className="px-6 py-4 text-center font-bold text-green-600">{scholarship.netPayable}</td>
+                          <td className="px-6 py-4 text-center text-gray-700">{scholarship.installment1}</td>
+                          <td className="px-6 py-4 text-center text-gray-700">{scholarship.installment2}</td>
+                          <td className="px-6 py-4 text-center text-gray-700">{scholarship.installment3}</td>
                         </tr>
                       ))}
                     </tbody>
