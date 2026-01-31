@@ -49,7 +49,7 @@ export default function Home() {
                 href="/courses"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-green-900 transition-all flex items-center gap-2"
               >
-                <FaDownload /> Download Fees
+                <FaDownload /> Check Fees
               </Link>
             </div>
           </div>

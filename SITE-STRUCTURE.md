@@ -42,7 +42,7 @@
 1. Hero Banner
    - Institute branding
    - Taglines (NEET | IIT-JEE | Foundation)
-   - 3 CTA buttons (Enquiry, Call, Download Fees)
+   - 3 CTA buttons (Enquiry, Call, Check Fees)
 
 2. Why ACI Section
    - 4 key features in card format
