@@ -206,16 +206,16 @@ export default function CoursesPage() {
                     <thead className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
                       <tr>
                         <th className="px-6 py-4 text-left">JEE Main Percentile</th>
-                        <th className="px-6 py-4 text-center">GEN/OBC/EWS</th>
-                        <th className="px-6 py-4 text-center">SC/ST</th>
+                        <th className="px-6 py-4 text-center">Payable Fee<br/>(GEN/OBC/EWS)</th>
+                        <th className="px-6 py-4 text-center">Payable Fee<br/>(SC/ST)</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       {scholarshipJEE.map((scholarship, index) => (
                         <tr key={index} className="hover:bg-blue-100 transition-colors">
                           <td className="px-6 py-4 font-semibold text-gray-900">{scholarship.percentile}</td>
-                          <td className="px-6 py-4 text-center font-bold text-blue-600">{scholarship.genOBCEWS}</td>
-                          <td className="px-6 py-4 text-center font-bold text-blue-600">{scholarship.scST}</td>
+                          <td className="px-6 py-4 text-center font-bold text-green-600">{scholarship.genOBCEWS}</td>
+                          <td className="px-6 py-4 text-center font-bold text-green-600">{scholarship.scST}</td>
                         </tr>
                       ))}
                     </tbody>
